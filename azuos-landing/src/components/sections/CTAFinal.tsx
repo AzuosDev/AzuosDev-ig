@@ -60,24 +60,24 @@ export default function CTAFinal() {
                 type="text"
                 required
                 autoComplete="name"
-                className="rounded-lg border border-white/15 bg-background px-4 py-2.5 text-sm text-text-primary outline-none transition-colors focus-visible:border-brand-end"
+                className="rounded-lg border border-white/15 bg-background px-4 py-2.5 text-sm text-text-primary transition-colors focus:border-brand-end focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-brand-end"
               />
             </div>
 
             <div className="flex flex-col gap-2">
               <label
-                htmlFor="contato"
+                htmlFor="email-whatsapp"
                 className="text-sm font-medium text-text-primary"
               >
                 E-mail ou WhatsApp
               </label>
               <input
-                id="contato"
+                id="email-whatsapp"
                 name="contato"
                 type="text"
                 required
                 autoComplete="email"
-                className="rounded-lg border border-white/15 bg-background px-4 py-2.5 text-sm text-text-primary outline-none transition-colors focus-visible:border-brand-end"
+                className="rounded-lg border border-white/15 bg-background px-4 py-2.5 text-sm text-text-primary transition-colors focus:border-brand-end focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-brand-end"
               />
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function CTAFinal() {
               name="mensagem"
               required
               rows={4}
-              className="resize-none rounded-lg border border-white/15 bg-background px-4 py-2.5 text-sm text-text-primary outline-none transition-colors focus-visible:border-brand-end"
+              className="resize-none rounded-lg border border-white/15 bg-background px-4 py-2.5 text-sm text-text-primary transition-colors focus:border-brand-end focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-brand-end"
             />
           </div>
 

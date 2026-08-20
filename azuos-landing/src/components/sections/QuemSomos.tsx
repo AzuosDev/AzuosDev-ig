@@ -39,9 +39,9 @@ export default function QuemSomos() {
       </div>
 
       <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2">
-        {equipe.map((membro) => (
+        {equipe.map((membro, index) => (
           <div
-            key={membro.nome}
+            key={index}
             className="flex flex-col items-center rounded-2xl border border-white/10 bg-surface p-6 text-center"
           >
             <div className="relative h-20 w-20 overflow-hidden rounded-full bg-background ring-1 ring-white/10">
