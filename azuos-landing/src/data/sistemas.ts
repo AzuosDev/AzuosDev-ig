@@ -25,14 +25,14 @@ export const sistemas: Sistema[] = [
     nome: "MeuGasto",
     descricao: "Controle de gastos, orçamentos e metas financeiras",
     tags: ["Web App", "Finanças"],
-    imagem: "/sistemas/meugasto.png", // placeholder — substituir pelo screenshot real
+    imagem: "/sistemas/meugasto.png",
     link: "https://meugasto.vercel.app/landing",
   },
   {
     nome: "InvenTech",
     descricao: "Sistema de gestão de inventário de TI",
     tags: ["Painel Admin"],
-    imagem: "/sistemas/inventechti.png", // placeholder — substituir pelo screenshot real
+    imagem: "/sistemas/inventechti.png",
     link: "https://inventechti.vercel.app/landing",
   },
 ];
