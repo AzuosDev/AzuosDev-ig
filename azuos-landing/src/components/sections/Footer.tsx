@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 const navLinks = [
   { label: "Serviços", href: "#servicos" },
@@ -66,10 +67,10 @@ export default function Footer() {
 
           <div className="flex flex-col items-center gap-4 sm:items-start">
             <a
-              href="mailto:contato@azuosdev.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="text-sm text-text-secondary transition-colors hover:text-text-primary"
             >
-              contato@azuosdev.com
+              {CONTACT_EMAIL}
             </a>
             <div className="flex gap-3">
               {socialLinks.map((social) => (

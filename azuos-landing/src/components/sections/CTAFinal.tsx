@@ -3,22 +3,32 @@
 import { useState, type FormEvent } from "react";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
-type Status = "idle" | "enviando" | "enviado";
+type Status = "idle" | "enviando" | "enviado" | "erro";
 
 export default function CTAFinal() {
   const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("enviando");
 
-    // TODO: substituir pela integração real de envio (ex: API route própria
-    // que dispara e-mail/webhook, ou serviço como Resend/Formspree).
-    // Por enquanto o envio é apenas simulado no front-end.
-    window.setTimeout(() => {
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Falha no envio");
+
       setStatus("enviado");
-      event.currentTarget.reset();
-    }, 700);
+      form.reset();
+    } catch {
+      setStatus("erro");
+    }
   }
 
   return (
@@ -119,9 +129,15 @@ export default function CTAFinal() {
             </a>
           </div>
 
-          <p role="status" aria-live="polite" className="mt-4 text-sm text-brand-end">
+          <p
+            role="status"
+            aria-live="polite"
+            className={`mt-4 text-sm ${status === "erro" ? "text-red-400" : "text-brand-end"}`}
+          >
             {status === "enviado" &&
               "Mensagem enviada! Vamos te responder em breve."}
+            {status === "erro" &&
+              "Não foi possível enviar agora. Tente de novo ou fale no WhatsApp."}
           </p>
         </form>
       </div>
