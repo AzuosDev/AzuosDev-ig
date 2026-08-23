@@ -24,8 +24,8 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 px-6 py-12">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center sm:items-start sm:text-left">
-        <div className="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
+      <div className="mx-auto flex max-w-5xl flex-col gap-8">
+        <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
           <div className="flex flex-col items-center gap-3 sm:items-start">
             <span className="flex items-center gap-2 font-display text-lg font-semibold text-text-primary">
               <Image
@@ -43,22 +43,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <nav aria-label="Navegação do rodapé">
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-text-secondary sm:grid-cols-1">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="transition-colors hover:text-text-primary"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <div className="flex flex-col items-center gap-4 sm:items-start">
+          <div className="flex flex-col items-center gap-3 sm:items-end">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
               className="text-sm text-text-secondary transition-colors hover:text-text-primary"
@@ -89,7 +74,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="w-full border-t border-white/10 pt-6 text-xs text-text-secondary">
+        <nav
+          aria-label="Navegação do rodapé"
+          className="border-t border-white/10 pt-6"
+        >
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-text-secondary sm:justify-start">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="transition-colors hover:text-text-primary"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <p className="w-full border-t border-white/10 pt-6 text-center text-xs text-text-secondary sm:text-left">
           © {new Date().getFullYear()} Azuos Dev. Todos os direitos
           reservados.
         </p>
