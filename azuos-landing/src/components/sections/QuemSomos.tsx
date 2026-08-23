@@ -5,21 +5,23 @@ type Membro = {
   cargo: string;
   foto: string;
   bio: string;
+  github: string;
 };
 
-// TODO: substituir pelos dados reais dos fundadores/equipe (nome, cargo, foto, bio)
 const equipe: Membro[] = [
   {
-    nome: "Nome do fundador",
-    cargo: "Cargo / função",
-    foto: "/equipe/placeholder-1.png",
-    bio: "Mini-bio curta contando a trajetória e o que motiva a pessoa a construir sistemas para outras empresas.",
+    nome: "Felipe de Souza",
+    cargo: "Cofundador",
+    foto: "/equipe/felipe-souza.jpg",
+    bio: "Cofundador da Azuos Dev, à frente do desenvolvimento e da arquitetura técnica de cada sistema entregue.",
+    github: "https://github.com/felipedes687-dotcom",
   },
   {
-    nome: "Nome do fundador",
-    cargo: "Cargo / função",
-    foto: "/equipe/placeholder-2.png",
-    bio: "Mini-bio curta contando a trajetória e o que motiva a pessoa a construir sistemas para outras empresas.",
+    nome: "Ezequiel Santos",
+    cargo: "Cofundador",
+    foto: "/equipe/ezequiel-santos.jpg",
+    bio: "Cofundador da Azuos Dev, focado em automações e em transformar processos manuais em soluções sob medida.",
+    github: "https://github.com/EzequiellSantos",
   },
 ];
 
@@ -55,7 +57,14 @@ export default function QuemSomos() {
             </div>
 
             <h3 className="mt-4 font-display text-lg font-semibold text-text-primary">
-              {membro.nome}
+              <a
+                href={membro.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-brand-end focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-end"
+              >
+                {membro.nome}
+              </a>
             </h3>
             <p className="text-sm font-medium text-brand-end">
               {membro.cargo}
