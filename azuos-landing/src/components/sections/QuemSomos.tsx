@@ -14,7 +14,7 @@ const equipe: Membro[] = [
     cargo: "Cofundador",
     foto: "/equipe/felipe-souza.jpg",
     bio: "Cofundador da Azuos Dev, à frente do desenvolvimento e da arquitetura técnica de cada sistema entregue.",
-    github: "https://github.com/felipedes687-dotcom",
+    github: "https://github.com/Felipe-Souzza",
   },
   {
     nome: "Ezequiel Santos",
