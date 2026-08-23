@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const navLinks = [
   { label: "Serviços", href: "#servicos" },
   { label: "Diferenciais", href: "#diferenciais" },
@@ -32,12 +34,14 @@ export default function Footer() {
         <div className="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex flex-col items-center gap-3 sm:items-start">
             <span className="flex items-center gap-2 font-display text-lg font-semibold text-text-primary">
-              <span
+              <Image
+                src="/logo.png"
+                alt=""
                 aria-hidden="true"
-                className="font-mono text-brand-end"
-              >
-                {"</>"}
-              </span>
+                width={28}
+                height={28}
+                className="h-7 w-7"
+              />
               Azuos Dev
             </span>
             <p className="max-w-xs text-sm text-text-secondary">
