@@ -11,14 +11,14 @@ export const sistemas: Sistema[] = [
     nome: "Ucatálogo",
     descricao: "Catálogo digital para empresas divulgarem seus produtos",
     tags: ["Web App"],
-    imagem: "/sistemas/ucatalogo.png", // placeholder — substituir pelo screenshot real
+    imagem: "/sistemas/ucatalogo.png",
     link: "https://ucatalogo.vercel.app/",
   },
   {
     nome: "Trimbook",
     descricao: "App de gestão para barbearias — agendamentos e clientes",
     tags: ["Mobile App"],
-    imagem: "/sistemas/trimbook.png", // placeholder — substituir pelo screenshot real
+    imagem: "/sistemas/trimbook.png",
     link: "https://trimbook-barbershop.vercel.app/landing",
   },
   {
