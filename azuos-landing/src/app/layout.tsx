@@ -18,7 +18,7 @@ const body = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Sistemas sob medida e automação de processos`,
+    default: SITE_NAME,
     template: `%s — ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} — Sistemas sob medida e automação de processos`,
     description: SITE_DESCRIPTION,
     images: ["/og-image.png"],
+  },
+  verification: {
+    google: "fG5QCaoInVjyY9J3wa_ltbAq3V2tFIKWxEr8qsuph9Q",
   },
 };
 
