@@ -1,5 +1,5 @@
-// TODO: substituir pelo domínio real de produção assim que o site for publicado
-export const SITE_URL = "https://azuosdev.com.br";
+// TODO: trocar pelo domínio próprio assim que ele for configurado na Vercel
+export const SITE_URL = "https://azuos-dev.vercel.app";
 
 export const SITE_NAME = "Azuos Dev";
 
