@@ -18,18 +18,18 @@ export default function Hero() {
           {"</"}Sistemas • Automações • Resultados{">"}
         </span>
 
-        <h1 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-text-primary opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:100ms] sm:text-5xl md:text-6xl">
+        <h1 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-text-primary opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:40ms] sm:text-5xl md:text-6xl">
           Sistemas sob medida que automatizam sua operação e entregam
           resultado mensurável
         </h1>
 
-        <p className="mt-6 max-w-xl text-balance text-base text-text-secondary opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:200ms] sm:text-lg">
+        <p className="mt-6 max-w-xl text-balance text-base text-text-secondary opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:80ms] sm:text-lg">
           Da automação de processos repetitivos a sistemas completos sob
           medida, a Azuos Dev cuida da tecnologia para você focar no que gera
           receita.
         </p>
 
-        <div className="mt-10 flex w-full flex-col items-center gap-4 opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:300ms] sm:w-auto sm:flex-row">
+        <div className="mt-10 flex w-full flex-col items-center gap-4 opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:120ms] sm:w-auto sm:flex-row">
           <Link
             href="#contato"
             className="w-full rounded-full bg-brand-gradient px-7 py-3.5 text-center font-medium text-white shadow-[0_0_0_1px_rgba(255,255,255,0.08)] transition-transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-end motion-reduce:transition-none sm:w-auto"
