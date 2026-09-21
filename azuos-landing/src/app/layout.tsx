@@ -17,11 +17,15 @@ const body = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: SITE_NAME,
-    template: `%s — ${SITE_NAME}`,
-  },
+  title: "Azuos Dev | Desenvolvimento de Sistemas e Automações",
   description: SITE_DESCRIPTION,
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: `${SITE_NAME} — Sistemas sob medida e automação de processos`,
     description: SITE_DESCRIPTION,
