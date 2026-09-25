@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-25T13:14:03.484Z",
+  "title": "Design System: Azuos Dev",
+  "extensions": {
+    "themes": {
+      "default": "dark",
+      "lightSelector": ":root[data-theme=\"light\"]",
+      "storageKey": "azuos-theme",
+      "note": "Tokens são tripletos RGB em globals.css; o frontmatter registra o tema escuro, colorMeta.<token>.lightTheme registra o claro."
+    },
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel Noturno",
+        "canonical": "rgb(11 7 20)",
+        "oklch": "oklch(14.2% 0.029 298)",
+        "lightTheme": "rgb(248 246 252)",
+        "tonalRamp": [
+          "oklch(15% 0.018 298)",
+          "oklch(25% 0.030 298)",
+          "oklch(35% 0.030 298)",
+          "oklch(50% 0.030 298)",
+          "oklch(62% 0.030 298)",
+          "oklch(74% 0.030 298)",
+          "oklch(85% 0.030 298)",
+          "oklch(95% 0.018 298)"
+        ],
+        "cssVariable": "--paper"
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Papel Recuado",
+        "canonical": "rgb(16 11 28)",
+        "oklch": "oklch(16.6% 0.035 296)",
+        "lightTheme": "rgb(240 236 249)",
+        "tonalRamp": [
+          "oklch(15% 0.021 296)",
+          "oklch(25% 0.035 296)",
+          "oklch(35% 0.035 296)",
+          "oklch(50% 0.035 296)",
+          "oklch(62% 0.035 296)",
+          "oklch(74% 0.035 296)",
+          "oklch(85% 0.035 296)",
+          "oklch(95% 0.021 296)"
+        ],
+        "cssVariable": "--paper-2"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Superfície",
+        "canonical": "rgb(20 16 31)",
+        "oklch": "oklch(18.6% 0.030 296)",
+        "lightTheme": "rgb(255 255 255)",
+        "tonalRamp": [
+          "oklch(15% 0.018 296)",
+          "oklch(25% 0.030 296)",
+          "oklch(35% 0.030 296)",
+          "oklch(50% 0.030 296)",
+          "oklch(62% 0.030 296)",
+          "oklch(74% 0.030 296)",
+          "oklch(85% 0.030 296)",
+          "oklch(95% 0.018 296)"
+        ],
+        "cssVariable": "--surface"
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Superfície Elevada",
+        "canonical": "rgb(28 22 43)",
+        "oklch": "oklch(21.9% 0.041 296)",
+        "lightTheme": "rgb(245 241 252)",
+        "tonalRamp": [
+          "oklch(15% 0.024 296)",
+          "oklch(25% 0.040 296)",
+          "oklch(35% 0.040 296)",
+          "oklch(50% 0.040 296)",
+          "oklch(62% 0.040 296)",
+          "oklch(74% 0.040 296)",
+          "oklch(85% 0.040 296)",
+          "oklch(95% 0.024 296)"
+        ],
+        "cssVariable": "--surface-2"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fio",
+        "canonical": "rgb(44 36 62)",
+        "oklch": "oklch(28.2% 0.048 297)",
+        "lightTheme": "rgb(224 217 238)",
+        "tonalRamp": [
+          "oklch(15% 0.029 297)",
+          "oklch(25% 0.048 297)",
+          "oklch(35% 0.048 297)",
+          "oklch(50% 0.048 297)",
+          "oklch(62% 0.048 297)",
+          "oklch(74% 0.048 297)",
+          "oklch(85% 0.048 297)",
+          "oklch(95% 0.029 297)"
+        ],
+        "cssVariable": "--line"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "rgb(245 243 249)",
+        "oklch": "oklch(96.7% 0.008 301)",
+        "lightTheme": "rgb(22 14 38)",
+        "tonalRamp": [
+          "oklch(15% 0.012 301)",
+          "oklch(25% 0.020 301)",
+          "oklch(35% 0.020 301)",
+          "oklch(50% 0.020 301)",
+          "oklch(62% 0.020 301)",
+          "oklch(74% 0.020 301)",
+          "oklch(85% 0.020 301)",
+          "oklch(95% 0.012 301)"
+        ],
+        "cssVariable": "--ink"
+      },
+      "body": {
+        "role": "neutral",
+        "displayName": "Corpo",
+        "canonical": "rgb(194 186 210)",
+        "oklch": "oklch(80.3% 0.034 301)",
+        "lightTheme": "rgb(72 63 94)",
+        "tonalRamp": [
+          "oklch(15% 0.020 301)",
+          "oklch(25% 0.034 301)",
+          "oklch(35% 0.034 301)",
+          "oklch(50% 0.034 301)",
+          "oklch(62% 0.034 301)",
+          "oklch(74% 0.034 301)",
+          "oklch(85% 0.034 301)",
+          "oklch(95% 0.020 301)"
+        ],
+        "cssVariable": "--body"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Apagado",
+        "canonical": "rgb(156 147 173)",
+        "oklch": "oklch(68.0% 0.039 301)",
+        "lightTheme": "rgb(101 92 122)",
+        "tonalRamp": [
+          "oklch(15% 0.023 301)",
+          "oklch(25% 0.039 301)",
+          "oklch(35% 0.039 301)",
+          "oklch(50% 0.039 301)",
+          "oklch(62% 0.039 301)",
+          "oklch(74% 0.039 301)",
+          "oklch(85% 0.039 301)",
+          "oklch(95% 0.023 301)"
+        ],
+        "cssVariable": "--muted"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Lilás Sinal",
+        "canonical": "rgb(167 139 250)",
+        "oklch": "oklch(70.9% 0.159 294)",
+        "lightTheme": "rgb(109 40 217)",
+        "tonalRamp": [
+          "oklch(15% 0.096 294)",
+          "oklch(25% 0.160 294)",
+          "oklch(35% 0.160 294)",
+          "oklch(50% 0.160 294)",
+          "oklch(62% 0.160 294)",
+          "oklch(74% 0.160 294)",
+          "oklch(85% 0.160 294)",
+          "oklch(95% 0.096 294)"
+        ],
+        "cssVariable": "--accent"
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Sinal Claro (início do gradiente)",
+        "canonical": "rgb(205 190 255)",
+        "oklch": "oklch(83.6% 0.091 295)",
+        "lightTheme": "rgb(139 92 246)",
+        "tonalRamp": [
+          "oklch(15% 0.072 295)",
+          "oklch(25% 0.120 295)",
+          "oklch(35% 0.120 295)",
+          "oklch(50% 0.120 295)",
+          "oklch(62% 0.120 295)",
+          "oklch(74% 0.120 295)",
+          "oklch(85% 0.120 295)",
+          "oklch(95% 0.072 295)"
+        ],
+        "cssVariable": "--signal"
+      },
+      "signal-2": {
+        "role": "primary",
+        "displayName": "Sinal Profundo (fim do gradiente)",
+        "canonical": "rgb(167 139 250)",
+        "oklch": "oklch(70.9% 0.159 294)",
+        "lightTheme": "rgb(109 40 217)",
+        "tonalRamp": [
+          "oklch(15% 0.096 294)",
+          "oklch(25% 0.160 294)",
+          "oklch(35% 0.160 294)",
+          "oklch(50% 0.160 294)",
+          "oklch(62% 0.160 294)",
+          "oklch(74% 0.160 294)",
+          "oklch(85% 0.160 294)",
+          "oklch(95% 0.096 294)"
+        ],
+        "cssVariable": "--signal-2"
+      },
+      "on-signal": {
+        "role": "primary",
+        "displayName": "Tinta sobre Sinal",
+        "canonical": "rgb(22 10 46)",
+        "oklch": "oklch(18.7% 0.069 294)",
+        "lightTheme": "rgb(255 255 255)",
+        "tonalRamp": [
+          "oklch(15% 0.042 294)",
+          "oklch(25% 0.070 294)",
+          "oklch(35% 0.070 294)",
+          "oklch(50% 0.070 294)",
+          "oklch(62% 0.070 294)",
+          "oklch(74% 0.070 294)",
+          "oklch(85% 0.070 294)",
+          "oklch(95% 0.042 294)"
+        ],
+        "cssVariable": "--on-signal"
+      },
+      "scene": {
+        "role": "neutral",
+        "displayName": "Cena Violeta",
+        "canonical": "rgb(33 19 66)",
+        "oklch": "oklch(23.7% 0.085 292)",
+        "lightTheme": "rgb(236 228 255)",
+        "tonalRamp": [
+          "oklch(15% 0.051 292)",
+          "oklch(25% 0.085 292)",
+          "oklch(35% 0.085 292)",
+          "oklch(50% 0.085 292)",
+          "oklch(62% 0.085 292)",
+          "oklch(74% 0.085 292)",
+          "oklch(85% 0.085 292)",
+          "oklch(95% 0.051 292)"
+        ],
+        "cssVariable": "--scene"
+      },
+      "dot": {
+        "role": "neutral",
+        "displayName": "Ponto da Grade",
+        "canonical": "rgb(167 139 250)",
+        "oklch": "oklch(70.9% 0.159 294)",
+        "lightTheme": "rgb(124 58 237)",
+        "tonalRamp": [
+          "oklch(15% 0.096 294)",
+          "oklch(25% 0.160 294)",
+          "oklch(35% 0.160 294)",
+          "oklch(50% 0.160 294)",
+          "oklch(62% 0.160 294)",
+          "oklch(74% 0.160 294)",
+          "oklch(85% 0.160 294)",
+          "oklch(95% 0.096 294)"
+        ],
+        "purpose": "Usado sempre a 22% na grade de pontos.",
+        "cssVariable": "--dot"
+      },
+      "brand-start": {
+        "role": "primary",
+        "displayName": "Violeta de Marca",
+        "canonical": "#7C3AED",
+        "tonalRamp": [
+          "oklch(15% 0.120 293)",
+          "oklch(25% 0.200 293)",
+          "oklch(35% 0.200 293)",
+          "oklch(50% 0.200 293)",
+          "oklch(62% 0.200 293)",
+          "oklch(74% 0.200 293)",
+          "oklch(85% 0.200 293)",
+          "oklch(95% 0.120 293)"
+        ]
+      },
+      "brand-end": {
+        "role": "primary",
+        "displayName": "Lilás de Marca",
+        "canonical": "#A78BFA",
+        "tonalRamp": [
+          "oklch(15% 0.096 294)",
+          "oklch(25% 0.160 294)",
+          "oklch(35% 0.160 294)",
+          "oklch(50% 0.160 294)",
+          "oklch(62% 0.160 294)",
+          "oklch(74% 0.160 294)",
+          "oklch(85% 0.160 294)",
+          "oklch(95% 0.096 294)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Só o título do hero; 2.5rem, 3.4rem (sm), 3.9rem (xl); duas linhas com a segunda em accent."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de seção via SectionHeading; 2.2rem, 2.9rem (sm), 3.4rem (lg)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nomes de projeto, plano, etapa e título do formulário."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Numeração 01–04 das etapas do processo; muted a 60% em repouso, accent quando ativa."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Parágrafo de abertura de hero e seção, até 54–58ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto de cartões e listas, até 48ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Rótulos de campo e colunas do rodapé, em caixa normal."
+      }
+    },
+    "shadows": [
+      {
+        "name": "signal-halo",
+        "value": "0 10px 30px -12px rgb(var(--signal-2) / 0.7)",
+        "purpose": "Embutido no botão de sinal; variações de 24–30px no plano destacado e no ícone de marca."
+      },
+      {
+        "name": "float-halo",
+        "value": "0 30px 80px -40px rgb(0 0 0 / 0.6)",
+        "purpose": "Formulário flutuando sobre o palco; família de 24–30px com spread negativo nas molduras de prova."
+      },
+      {
+        "name": "state-ring",
+        "value": "0 0 0 4px rgb(var(--accent) / 0.2)",
+        "purpose": "Ponto indicador ativo; 6px a 12% no marcador de etapa ativa."
+      },
+      {
+        "name": "input-focus-ring",
+        "value": "0 0 0 4px rgb(var(--accent) / 0.15)",
+        "purpose": "Foco de campos de formulário."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Curva padrão de hover e entrada."
+      },
+      {
+        "name": "rise",
+        "value": "rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "purpose": "Entrada: translateY(24px) e blur(8px) até o repouso; atrasos escalonados de 120–320ms no hero."
+      },
+      {
+        "name": "hover-lift",
+        "value": "translateY(-2px), 300ms, ease-out-expo",
+        "purpose": "Botões e CTAs."
+      },
+      {
+        "name": "wordmark-rise",
+        "value": "translateY(33%) e opacity 0 até o repouso, 1200ms, ease-out-expo",
+        "purpose": "Wordmark do rodapé ao entrar na tela."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "durações a 0.01ms sob prefers-reduced-motion",
+        "purpose": "Obrigatório em toda animação."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ],
+    "textures": [
+      {
+        "name": "dot-grid",
+        "value": "radial-gradient(rgb(var(--dot) / 0.22) 1px, transparent 1.2px); background-size: 14px 14px",
+        "purpose": "Grade de pontos dos palcos e molduras, sempre mascarada por gradiente."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão de Sinal",
+      "kind": "button",
+      "refersTo": "button-signal",
+      "description": "Ação principal (enviar formulário, pedir orçamento). Único uso do gradiente de sinal.",
+      "html": "<button class=\"ds-btn-signal\">Pedir orçamento <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/><polyline points=\"12 5 19 12 12 19\"/></svg></button>",
+      "css": ".ds-btn-signal { font-family: var(--font-body), Geist, sans-serif; display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border: none; border-radius: 16px; font-size: 15px; font-weight: 600; background-image: linear-gradient(100deg, rgb(var(--signal)) 0%, rgb(var(--signal-2)) 100%); color: rgb(var(--on-signal)); box-shadow: 0 10px 30px -12px rgb(var(--signal-2) / 0.7); cursor: pointer; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s; } .ds-btn-signal:hover { transform: translateY(-2px); filter: brightness(1.05); } .ds-btn-signal:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Pílula de Tinta",
+      "kind": "button",
+      "refersTo": "button-ink-pill",
+      "description": "CTA compacto do header e de faixas: pílula clara sobre fundo escuro.",
+      "html": "<a href=\"#\" class=\"ds-btn-ink\">Pedir orçamento</a>",
+      "css": ".ds-btn-ink { font-family: var(--font-body), Geist, sans-serif; display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 9999px; background: rgb(var(--ink)); color: rgb(var(--paper)); font-size: 15px; font-weight: 600; text-decoration: none; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s, color 0.2s; } .ds-btn-ink:hover { transform: translateY(-2px); } .ds-btn-ink:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botão Secundário",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Alternativa ao sinal (WhatsApp, planos não destacados).",
+      "html": "<a href=\"#\" class=\"ds-btn-secondary\">Falar no WhatsApp</a>",
+      "css": ".ds-btn-secondary { font-family: var(--font-body), Geist, sans-serif; display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 16px; border: 1px solid rgb(var(--line)); background: rgb(var(--surface)); color: rgb(var(--ink)); font-size: 15px; font-weight: 600; text-decoration: none; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s, color 0.2s; } .ds-btn-secondary:hover { border-color: rgb(var(--accent) / 0.5); } .ds-btn-secondary:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Campo de Texto",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Campo do formulário de contato com rótulo e marca de obrigatório.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Nome <em>obrigatório</em></span><input class=\"ds-input\" placeholder=\"Como podemos te chamar?\" /></label>",
+      "css": ".ds-field { font-family: var(--font-body), Geist, sans-serif; display: flex; flex-direction: column; gap: 8px; max-width: 320px; } .ds-field-label { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; color: rgb(var(--ink)); } .ds-field-label em { font-style: normal; font-weight: 400; color: rgb(var(--muted)); } .ds-input { font-family: var(--font-body), Geist, sans-serif; width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid rgb(var(--line)); background: rgb(var(--paper) / 0.6); color: rgb(var(--ink)); font-size: 15px; caret-color: rgb(var(--accent)); transition: border-color 0.2s, box-shadow 0.2s; } .ds-input::placeholder { color: rgb(var(--muted)); } .ds-input:hover { border-color: rgb(var(--accent) / 0.4); } .ds-input:focus { outline: none; border-color: rgb(var(--accent)); box-shadow: 0 0 0 4px rgb(var(--accent) / 0.15); }"
+    },
+    {
+      "name": "Navegação em Pílula",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Links do header; o ativo ganha fundo surface-2.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-link is-active\">Início</a><a href=\"#\" class=\"ds-nav-link\">Projetos</a><a href=\"#\" class=\"ds-nav-link\">Processo</a><a href=\"#\" class=\"ds-nav-link\">FAQ</a></nav>",
+      "css": ".ds-nav { font-family: var(--font-body), Geist, sans-serif; display: flex; gap: 4px; } .ds-nav-link { display: block; padding: 8px 14px; border-radius: 12px; font-size: 15px; font-weight: 500; color: rgb(var(--body)); text-decoration: none; transition: color 0.2s, background-color 0.2s; } .ds-nav-link:hover { color: rgb(var(--ink)); } .ds-nav-link.is-active { background: rgb(var(--surface-2)); color: rgb(var(--ink)); } .ds-nav-link:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Filtro de Categoria",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Filtro de projetos com contador tabular.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip is-active\" aria-pressed=\"true\">Todos <span>4</span></button><button class=\"ds-chip\" aria-pressed=\"false\">Gestão <span>2</span></button></div>",
+      "css": ".ds-chips { font-family: var(--font-body), Geist, sans-serif; display: flex; gap: 8px; } .ds-chip { font-family: var(--font-body), Geist, sans-serif; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 12px; border: 1px solid rgb(var(--line)); background: rgb(var(--surface)); color: rgb(var(--body)); font-size: 14px; font-weight: 500; cursor: pointer; transition: color 0.2s, background-color 0.2s, border-color 0.2s; } .ds-chip span { padding: 0 6px; border-radius: 6px; font-size: 12px; font-variant-numeric: tabular-nums; background: rgb(var(--surface-2)); color: rgb(var(--muted)); } .ds-chip:hover { color: rgb(var(--ink)); } .ds-chip.is-active { border-color: rgb(var(--accent) / 0.5); background: rgb(var(--accent) / 0.15); color: rgb(var(--ink)); } .ds-chip.is-active span { background: rgb(var(--accent) / 0.25); color: rgb(var(--ink)); } .ds-chip:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Título em Duas Linhas",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "SectionHeading: afirmação em tinta, resposta em lilás.",
+      "html": "<h2 class=\"ds-heading\">Ideias de verdade.<span>Sistemas em produção.</span></h2>",
+      "css": ".ds-heading { font-family: var(--font-display), \"Bricolage Grotesque\", sans-serif; margin: 0; font-size: 3.4rem; font-weight: 600; line-height: 1.02; letter-spacing: -0.04em; color: rgb(var(--ink)); text-wrap: balance; } .ds-heading span { display: block; color: rgb(var(--accent)); }"
+    },
+    {
+      "name": "Cartão",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Cartão de plano/conteúdo: surface, borda line, 28px.",
+      "html": "<article class=\"ds-card\"><h3>Site Institucional</h3><p>Presença completa online, com múltiplas páginas.</p></article>",
+      "css": ".ds-card { font-family: var(--font-body), Geist, sans-serif; max-width: 340px; padding: 28px; border-radius: 28px; border: 1px solid rgb(var(--line)); background: rgb(var(--surface)); } .ds-card h3 { font-family: var(--font-display), \"Bricolage Grotesque\", sans-serif; margin: 0; font-size: 1.75rem; font-weight: 600; line-height: 1.02; letter-spacing: -0.04em; color: rgb(var(--ink)); } .ds-card p { margin: 8px 0 0; font-size: 15px; line-height: 1.625; color: rgb(var(--body)); }"
+    },
+    {
+      "name": "Palco",
+      "kind": "custom",
+      "refersTo": "stage",
+      "description": "Painel de 32px com lavagem violeta e grade de pontos que abre e fecha a página.",
+      "html": "<section class=\"ds-stage\"><div class=\"ds-stage-dots\"></div><p class=\"ds-stage-title\">Vamos tirar seu projeto do papel.<span>Começa com um oi.</span></p></section>",
+      "css": ".ds-stage { position: relative; overflow: hidden; padding: 56px; border-radius: 32px; border: 1px solid rgb(var(--line)); background: radial-gradient(70% 60% at 12% 0%, rgb(var(--scene) / 0.9) 0%, transparent 70%), radial-gradient(120% 90% at 85% 100%, rgb(var(--scene)) 0%, transparent 65%), linear-gradient(160deg, rgb(var(--surface)) 0%, rgb(var(--scene) / 0.55) 55%, rgb(var(--scene) / 0.85) 100%); } .ds-stage-dots { position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgb(var(--dot) / 0.22) 1px, transparent 1.2px); background-size: 14px 14px; -webkit-mask-image: radial-gradient(90% 80% at 75% 40%, black 20%, transparent 85%); mask-image: radial-gradient(90% 80% at 75% 40%, black 20%, transparent 85%); } .ds-stage-title { font-family: var(--font-display), \"Bricolage Grotesque\", sans-serif; position: relative; margin: 0; font-size: 3rem; font-weight: 600; line-height: 1.02; letter-spacing: -0.04em; color: rgb(var(--ink)); } .ds-stage-title span { display: block; color: rgb(var(--accent)); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Estúdio de Produto Noturno",
+    "overview": "A página inteira se comporta como a bancada de um estúdio que fabrica software: palcos escuros e arredondados, banhados de violeta profundo com uma grade de pontos, onde a prova aparece em forma de interface (janelas de navegador, quadros de tarefas, orçamentos, conversas) desenhada em código, nunca como ilustração decorativa. O tom é confiante e técnico sem frieza: o lilás é o sinal que responde, a tinta clara é a afirmação.\n\nA densidade é média e generosa: seções com 96 a 128px de respiro vertical, painéis com borda de 1px e cantos grandes, conteúdo em até 88rem. O mundo tem dois temas com o mesmo desenho: escuro como padrão (papel violeta quase preto) e claro por toggle (papel lilás muito claro, tinta violeta escura). Nada muda de forma entre os temas, só os valores das variáveis.\n\nA tipografia carrega a voz: Bricolage Grotesque com tracking apertado em títulos de duas linhas, a segunda sempre em lilás. Geist faz o trabalho do corpo, sem enfeite.",
+    "keyCharacteristics": [
+      "Palcos arredondados (32px) com lavagem violeta e grade de pontos abrem e fecham a página.",
+      "Títulos em duas linhas: afirmação em tinta, resposta em lilás.",
+      "Painéis `surface` sobre `paper`, separados por borda `line` de 1px, não por sombra.",
+      "Provas como mini-interfaces codificadas dentro de molduras de 26/18px.",
+      "Um único gradiente de sinal (lilás claro para lilás) reservado à ação principal.",
+      "Tema escuro padrão e tema claro espelhado pelas mesmas variáveis RGB."
+    ],
+    "rules": [
+      {
+        "name": "The Second-Line Rule",
+        "body": "O lilás entra no texto como resposta: a segunda linha do título, o link ativo, o número da etapa ativa. Nunca em parágrafos inteiros.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Gradient Rule",
+        "body": "O gradiente de sinal pertence só ao botão de ação principal (e ao ícone de marca em Quem Somos). Cartões, fundos e títulos não usam gradiente de sinal; fundos usam a lavagem `scene`.",
+        "section": "colors"
+      },
+      {
+        "name": "The Variable-Only Rule",
+        "body": "Toda cor de interface sai de uma variável de `globals.css`, para que o tema claro funcione sem exceções. Literais hex ficam restritos a marcas de terceiros (verde WhatsApp #25D366).",
+        "section": "colors"
+      },
+      {
+        "name": "The Tight Display Rule",
+        "body": "Toda instância de Bricolage leva `tracking-display` (-0.04em) e line-height 1.02, pela classe `.heading`. A única exceção é o e-mail grande do rodapé (-0.02em), que precisa ser legível como endereço.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence-Case Rule",
+        "body": "Nenhum rótulo em caixa alta com tracking largo. Hierarquia vem de tamanho, peso e cor.",
+        "section": "typography"
+      },
+      {
+        "name": "The Border-First Rule",
+        "body": "Separação de superfícies é trabalho da borda `line` de 1px. Sombra só entra em elementos que flutuam sobre outra superfície, e sempre com spread negativo.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** escrever todo título de seção em duas linhas pelo `SectionHeading`: afirmação em `ink`, resposta em `accent`.",
+      "**Do** usar cores apenas por variável (`rgb(var(--token))` ou classes Tailwind do token) para que o tema claro funcione.",
+      "**Do** separar superfícies com borda `line` de 1px e camadas `paper` / `surface` / `surface-2`.",
+      "**Do** mostrar provas como mini-interfaces codificadas dentro da Moldura de Prova.",
+      "**Do** aninhar raios: 32px palco, 28px cartão, 20px mídia, 12–16px controles.",
+      "**Do** animar entradas com `rise` (0.9s, `cubic-bezier(0.16, 1, 0.3, 1)`) e respeitar `prefers-reduced-motion`.",
+      "**Do** aplicar `.focus-ring` em todo elemento interativo."
+    ],
+    "donts": [
+      "**Don't** usar o gradiente de sinal fora do botão de ação principal.",
+      "**Don't** estruturar uma seção como grade centralizada de cartões iguais de ícone + título + parágrafo; serviços se mostram por Moldura de Prova, e os destaques do hero (ícone + título + link, alinhados à esquerda) são navegação, não conteúdo.",
+      "**Don't** usar rótulos em caixa alta com tracking largo acima dos títulos.",
+      "**Don't** usar sombras curtas e duras ou sombras para separar superfícies que a borda já separa.",
+      "**Don't** introduzir cores literais de interface; só marcas de terceiros (#25D366) ficam em hex.",
+      "**Don't** colocar Bricolage sem `tracking-display`, nem Geist em títulos."
+    ]
+  }
+}
