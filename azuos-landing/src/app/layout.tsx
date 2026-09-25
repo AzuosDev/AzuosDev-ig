@@ -71,7 +71,8 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="bg-paper font-body text-ink antialiased">
+      {/* Extensões do navegador (ex.: ColorZilla) injetam atributos no body antes da hidratação. */}
+      <body className="bg-paper font-body text-ink antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>
