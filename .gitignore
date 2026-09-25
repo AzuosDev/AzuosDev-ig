@@ -1,1 +1,5 @@
 node_modules/
+
+# Impeccable: capturas de revisão e cache local
+.impeccable/review/
+.impeccable/hook.cache.json
