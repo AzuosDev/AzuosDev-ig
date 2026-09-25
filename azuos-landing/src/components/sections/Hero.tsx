@@ -1,57 +1,93 @@
-import Link from "next/link";
-import { getWhatsAppLink } from "@/lib/whatsapp";
+import ContactForm from "@/components/ui/ContactForm";
+import { Icon, type IconName } from "@/components/ui/Icon";
+
+const destaques: { titulo: string; href: string; destino: string; icon: IconName }[] = [
+  { titulo: "Sistemas feitos para o seu processo", href: "#servicos", destino: "Ver serviços", icon: "code" },
+  { titulo: "Automação de tarefas repetitivas", href: "#servicos", destino: "Ver automações", icon: "refresh" },
+  { titulo: "Orçamento com escopo, prazo e valor", href: "#processo", destino: "Ver processo", icon: "receipt" },
+  { titulo: "Pagamento dividido por etapa", href: "#faq", destino: "Ver pagamento", icon: "wallet" },
+  { titulo: "Garantia com correções incluídas", href: "#processo", destino: "Ver garantia", icon: "shield" },
+  { titulo: "4 sistemas reais em produção", href: "#projetos", destino: "Ver projetos", icon: "layers" },
+];
 
 export default function Hero() {
-  const whatsappHref = getWhatsAppLink(
-    "Olá! Quero pedir um orçamento com a Azuos Dev.",
-  );
-
   return (
-    <section className="relative overflow-hidden px-6 pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-44 lg:pb-36">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand-gradient opacity-20 blur-3xl sm:h-[560px] sm:w-[560px]"
-      />
+    <section id="inicio" aria-labelledby="hero-titulo" className="px-2 pb-8 pt-2 sm:px-4 lg:px-5">
+      <div className="stage relative mx-auto max-w-[92rem] overflow-hidden rounded-[32px] border border-line">
+        <div
+          aria-hidden
+          className="dot-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(90%_80%_at_75%_40%,black_20%,transparent_85%)]"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-24 -top-10 h-[130%] w-[42%] -skew-x-[18deg] bg-gradient-to-r from-transparent via-ink/[0.06] to-transparent"
+        />
 
-      <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-        <span className="mb-6 rounded-full border border-white/10 bg-surface px-4 py-1.5 font-mono text-xs tracking-wide text-text-secondary opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:0ms]">
-          {"</"}Sistemas • Automações • Resultados{">"}
-        </span>
-
-        <h1 className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-text-primary opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:40ms] sm:text-5xl md:text-6xl">
-          Sistemas sob medida que automatizam sua operação e entregam
-          resultado mensurável
-        </h1>
-
-        <p className="mt-6 max-w-xl text-balance text-base text-text-secondary opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:80ms] sm:text-lg">
-          Da automação de processos repetitivos a sistemas completos sob
-          medida, a Azuos Dev cuida da tecnologia para você focar no que gera
-          receita.
-        </p>
-
-        <div className="mt-10 flex w-full flex-col items-center gap-4 opacity-0 motion-safe:animate-fade-up motion-reduce:opacity-100 [animation-delay:120ms] sm:w-auto sm:flex-row">
-          <Link
-            href="#contato"
-            className="w-full rounded-full bg-brand-gradient px-7 py-3.5 text-center font-medium text-white shadow-[0_0_0_1px_rgba(255,255,255,0.08)] transition-transform hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-end motion-reduce:transition-none sm:w-auto"
-          >
-            Peça um orçamento
-          </Link>
-          <a
-            href={whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex w-full items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-3.5 font-medium text-text-primary transition-colors hover:border-brand-end/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-end sm:w-auto"
-          >
-            <svg
-              aria-hidden
-              className="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="currentColor"
+        <div className="relative grid gap-10 px-5 py-12 sm:px-10 sm:py-16 lg:grid-cols-[1.08fr_0.92fr] lg:grid-rows-[auto_1fr] lg:gap-x-14 lg:gap-y-10 lg:px-14 lg:py-20 xl:px-20">
+          <div className="flex flex-col">
+            <h1
+              id="hero-titulo"
+              className="heading text-[2.5rem] sm:text-[3.4rem] xl:text-[3.9rem]"
             >
-              <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38a9.96 9.96 0 0 0 4.79 1.22h.01c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm0 18.15h-.01a8.2 8.2 0 0 1-4.17-1.14l-.3-.18-3.11.82.83-3.03-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.52 3.68-8.2 8.22-8.2 2.2 0 4.26.86 5.82 2.41a8.14 8.14 0 0 1 2.4 5.8c0 4.52-3.68 8.19-8.22 8.19Zm4.5-6.14c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.79.96-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14 0-.31-.02-.47-.02s-.43.06-.66.31c-.23.25-.86.85-.86 2.06s.89 2.39 1.01 2.56c.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.67-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z" />
-            </svg>
-            Fale no WhatsApp
-          </a>
+              <span className="block motion-safe:animate-rise">
+                Sistemas sob medida que automatizam sua operação
+              </span>
+              <span className="block text-accent motion-safe:animate-rise motion-safe:[animation-delay:120ms]">
+                e entregam resultado mensurável.
+              </span>
+            </h1>
+
+            <p className="mt-7 max-w-[54ch] text-lg leading-relaxed text-body motion-safe:animate-rise motion-safe:[animation-delay:220ms]">
+              Da automação de processos repetitivos a sistemas completos sob
+              medida, a Azuos Dev cuida da tecnologia para você focar no que
+              gera receita.
+            </p>
+          </div>
+
+          <div className="motion-safe:animate-rise motion-safe:[animation-delay:180ms] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:pt-2">
+            <ContactForm />
+          </div>
+
+          <div className="flex flex-col lg:col-start-1 lg:row-start-2">
+            <ul className="grid gap-3 sm:grid-cols-2 motion-safe:animate-rise motion-safe:[animation-delay:320ms]">
+              {destaques.map((item) => (
+                <li key={item.titulo}>
+                  <a
+                    href={item.href}
+                    className="focus-ring group flex h-full items-center gap-3.5 rounded-2xl border border-line bg-paper/50 p-3 pr-4 transition-colors duration-200 hover:border-accent/40 hover:bg-surface"
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-line bg-surface-2 text-accent">
+                      <Icon name={item.icon} className="h-5 w-5" />
+                    </span>
+                    <span className="flex flex-col">
+                      <span className="text-[15px] font-semibold leading-snug text-ink">
+                        {item.titulo}
+                      </span>
+                      <span className="mt-0.5 flex items-center gap-1 text-[13px] text-muted transition-colors group-hover:text-accent">
+                        {item.destino}
+                        <Icon name="arrowRight" className="h-3 w-3" />
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+              <span className="flex items-center gap-2 rounded-full border border-line bg-paper/60 px-3.5 py-2 text-body">
+                <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_0_4px_rgb(var(--accent)/0.2)]" />
+                Ceará · atendimento em todo o Brasil
+              </span>
+              <a
+                href="#projetos"
+                className="focus-ring flex items-center gap-2 rounded font-semibold text-ink hover:text-accent"
+              >
+                Ver projetos entregues
+                <Icon name="arrowRight" className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
