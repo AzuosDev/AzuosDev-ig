@@ -1,16 +1,7 @@
-import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { GitHubIcon } from "@/components/ui/Icon";
+import ProfileCardCarousel, { type Perfil } from "@/components/ui/ProfileCardCarousel";
 
-type Membro = {
-  nome: string;
-  cargo: string;
-  foto: string;
-  bio: string;
-  github?: string;
-};
-
-const equipe: Membro[] = [
+const equipe: Perfil[] = [
   {
     nome: "Felipe de Souza",
     cargo: "Cofundador",
@@ -49,47 +40,7 @@ export default function QuemSomos() {
           fim.
         </SectionHeading>
 
-        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {equipe.map((membro, index) => (
-            <li
-              key={membro.nome}
-              className={`group flex flex-col rounded-[28px] border border-line bg-surface p-3 ${
-                index === 1 ? "lg:translate-y-10" : ""
-              }`}
-            >
-              <div className="relative aspect-square overflow-hidden rounded-[20px] bg-paper-2">
-                <Image
-                  src={membro.foto}
-                  alt={`Foto de ${membro.nome}`}
-                  fill
-                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-                  className="object-cover object-[50%_30%] transition-transform duration-700 ease-out-expo group-hover:scale-[1.03]"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
-                <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#160E26]">
-                  {membro.cargo}
-                </span>
-              </div>
-              <div className="px-3 pb-3 pt-5">
-                <div className="flex items-center justify-between gap-3">
-                  <h3 className="heading text-2xl">{membro.nome}</h3>
-                  {membro.github && (
-                    <a
-                      href={membro.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`GitHub de ${membro.nome}`}
-                      className="focus-ring flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-line bg-surface-2 text-body transition-colors hover:border-accent/50 hover:text-ink"
-                    >
-                      <GitHubIcon className="h-[18px] w-[18px]" />
-                    </a>
-                  )}
-                </div>
-                <p className="mt-3 text-[15px] leading-relaxed text-body">{membro.bio}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <ProfileCardCarousel perfis={equipe} className="mt-14" />
       </div>
     </section>
   );

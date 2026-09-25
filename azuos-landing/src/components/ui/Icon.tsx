@@ -103,6 +103,8 @@ const paths: Record<string, ReactNode> = {
       <polyline points="22 6 12 13 2 6" />
     </>
   ),
+  chevronLeft: <polyline points="15 18 9 12 15 6" />,
+  chevronRight: <polyline points="9 18 15 12 9 6" />,
   plus: (
     <>
       <line x1="12" y1="5" x2="12" y2="19" />
