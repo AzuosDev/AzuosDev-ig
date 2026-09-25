@@ -50,7 +50,7 @@ export default function Footer() {
 
   return (
     <footer className="px-2 pb-2 sm:px-4 sm:pb-4 lg:px-5">
-      <div className="stage relative mx-auto max-w-[92rem] overflow-hidden rounded-[32px] border border-line">
+      <div className="stage relative mx-auto max-w-[92rem] overflow-clip rounded-[32px] border border-line">
         <div className="dot-grid pointer-events-none absolute inset-0 opacity-30 [mask-image:linear-gradient(to_bottom,transparent,black_70%)]" />
 
         <div className="relative grid gap-14 px-6 pt-16 sm:px-10 sm:pt-20 lg:grid-cols-[1.3fr_0.7fr_0.7fr] lg:px-14 xl:px-20">

@@ -13,7 +13,7 @@ Donos e gestores de pequenas e médias empresas, além de empreendedores e autô
 A Azuos Dev é uma dev house que desenvolve sistemas sob medida, automações de processos, integrações/APIs, painéis e dashboards, landing pages e sites institucionais, além de manutenção e evolução de sistemas em produção. Sucesso da landing: o visitante entende a oferta em segundos e pede orçamento (formulário, que envia e-mail via Resend, ou WhatsApp).
 
 ## Positioning
-Cada projeto nasce do fluxo real da empresa, não de template genérico. Dois cofundadores conduzem o projeto do início ao fim, com cronograma e marcos definidos no orçamento, acompanhamento transparente, pagamento por etapa e garantia pós-entrega.
+Cada projeto nasce do fluxo real da empresa, não de template genérico. Três sócios cofundadores conduzem o projeto do início ao fim, com cronograma e marcos definidos no orçamento, acompanhamento transparente, pagamento por etapa e garantia pós-entrega.
 
 ## Operating Context
 Contato por formulário (`/api/contact`), WhatsApp (wa.me/558899785493) e e-mail azuos.org@gmail.com. Instagram @azuos.dev. Orçamento sempre "sob consulta"; não há preço público.
@@ -31,7 +31,7 @@ Contato por formulário (`/api/contact`), WhatsApp (wa.me/558899785493) e e-mail
 
 ## Evidence on Hand
 - Projetos reais em produção com prints: Ucatálogo, Trimbook, MeuGasto, InvenTech (`azuos-landing/public/sistemas/`, `azuos-landing/src/data/sistemas.ts`).
-- Equipe: Felipe de Souza e Ezequiel Santos, cofundadores, com fotos e GitHub (`azuos-landing/public/equipe/`).
+- Equipe: Felipe de Souza (desenvolvimento e arquitetura) e Ezequiel Santos (automações), cofundadores com GitHub; Luiz Eduardo, sócio e cofundador, marketing, mídias sociais e controle financeiro (sem link público). Fotos em `azuos-landing/public/equipe/`.
 - Indicadores reais: 4 sistemas em produção, 6+ tecnologias no stack.
 - Ausentes, não inventar: depoimentos de clientes, avaliações, preços, número de clientes, prazos além dos já citados no FAQ.
 

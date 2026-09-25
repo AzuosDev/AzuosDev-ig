@@ -13,14 +13,14 @@ const destaques: { titulo: string; href: string; destino: string; icon: IconName
 export default function Hero() {
   return (
     <section id="inicio" aria-labelledby="hero-titulo" className="px-2 pb-8 pt-2 sm:px-4 lg:px-5">
-      <div className="stage relative mx-auto max-w-[92rem] overflow-hidden rounded-[32px] border border-line">
+      <div className="stage relative mx-auto max-w-[92rem] overflow-clip rounded-[32px] border border-line">
         <div
           aria-hidden
           className="dot-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(90%_80%_at_75%_40%,black_20%,transparent_85%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -left-24 -top-10 h-[130%] w-[42%] -skew-x-[18deg] bg-gradient-to-r from-transparent via-ink/[0.06] to-transparent"
+          className="pointer-events-none absolute -left-24 -top-10 h-[130%] w-[42%] -skew-x-[18deg] sheen"
         />
 
         <div className="relative grid gap-10 px-5 py-12 sm:px-10 sm:py-16 lg:grid-cols-[1.08fr_0.92fr] lg:grid-rows-[auto_1fr] lg:gap-x-14 lg:gap-y-10 lg:px-14 lg:py-20 xl:px-20">

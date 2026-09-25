@@ -21,6 +21,7 @@
   --scene: 33 19 66;
   --scene-line: 72 50 124;
   --dot: 167 139 250;
+  --sheen: 255 255 255 / 0.045;
 }
 
 :root[data-theme="light"] {
@@ -40,6 +41,7 @@
   --scene: 236 228 255;
   --scene-line: 212 198 250;
   --dot: 124 58 237;
+  --sheen: 255 255 255 / 0.7;
 }
 
 html {
@@ -78,6 +80,11 @@ textarea {
       radial-gradient(70% 60% at 12% 0%, rgb(var(--scene) / 0.9) 0%, transparent 70%),
       radial-gradient(120% 90% at 85% 100%, rgb(var(--scene)) 0%, transparent 65%),
       linear-gradient(160deg, rgb(var(--surface)) 0%, rgb(var(--scene) / 0.55) 55%, rgb(var(--scene) / 0.85) 100%);
+  }
+
+  /* Brilho diagonal do palco: claro nos dois temas, nunca a cor da tinta. */
+  .sheen {
+    background-image: linear-gradient(to right, transparent, rgb(var(--sheen)), transparent);
   }
 
   .btn-signal {
