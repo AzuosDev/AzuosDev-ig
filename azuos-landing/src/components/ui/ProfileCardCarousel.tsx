@@ -9,6 +9,8 @@ export type Perfil = {
   nome: string;
   cargo: string;
   foto: string;
+  /** object-position da foto no quadro 3:4; útil para fotos em 9:16. */
+  foco?: string;
   bio: string;
   github?: string;
   instagram?: string;
@@ -51,25 +53,22 @@ export default function ProfileCardCarousel({ perfis, className = "" }: Props) {
         aria-roledescription="carrossel"
         aria-label="Fundadores da Azuos Dev"
         onKeyDown={onKeyDown}
-        className={`mx-auto w-full max-w-5xl ${className}`}
+        className={`w-full max-w-5xl ${className}`}
       >
         <div className="relative flex flex-col items-center md:flex-row">
           {/* Foto */}
-          <div className="relative aspect-square w-full max-w-sm shrink-0 overflow-hidden rounded-[28px] bg-paper-2 md:h-[470px] md:w-[470px] md:max-w-none">
+          <div className="relative aspect-[3/4] w-full max-w-xs shrink-0 overflow-hidden rounded-[28px] bg-paper-2 md:w-[390px] md:max-w-none">
             <AnimatePresence mode="wait" initial={false}>
               <motion.div key={atual.foto} {...fade} className="absolute inset-0">
                 <Image
                   src={atual.foto}
                   alt={`Foto de ${atual.nome}`}
                   fill
-                  sizes="(min-width: 768px) 470px, 384px"
-                  className="object-cover object-[50%_30%]"
+                  sizes="(min-width: 768px) 390px, 320px"
+                  className="object-cover"
+                  style={{ objectPosition: atual.foco ?? "50% 50%" }}
                   draggable={false}
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
-                <span className="absolute bottom-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#160E26]">
-                  {atual.cargo}
-                </span>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -77,13 +76,13 @@ export default function ProfileCardCarousel({ perfis, className = "" }: Props) {
           {/* Cartão */}
           <div
             aria-live="polite"
-            className="z-10 -mt-12 w-[calc(100%-2rem)] max-w-xl rounded-[28px] border border-line bg-surface p-6 shadow-[0_30px_80px_-40px_rgb(0_0_0/0.6)] sm:p-8 md:-ml-20 md:mt-0 md:w-auto md:flex-1"
+            className="z-10 -mt-12 w-[calc(100%-2rem)] max-w-2xl rounded-[28px] border border-line bg-surface p-6 shadow-[0_30px_80px_-40px_rgb(0_0_0/0.6)] sm:p-10 md:-ml-20 md:mt-0 md:w-auto md:flex-1"
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.div key={atual.nome} {...fade}>
-                <h3 className="heading text-3xl">{atual.nome}</h3>
-                <p className="mt-2 text-sm font-medium text-muted">{atual.cargo}</p>
-                <p className="mt-5 text-[15px] leading-relaxed text-body sm:text-base">{atual.bio}</p>
+                <h3 className="heading text-[2rem] sm:text-[2.6rem]">{atual.nome}</h3>
+                <p className="mt-3 text-sm font-semibold text-accent sm:text-base">{atual.cargo}</p>
+                <p className="mt-6 text-base leading-relaxed text-body sm:text-lg">{atual.bio}</p>
 
                 {redes.length > 0 && (
                   <div className="mt-7 flex gap-3">

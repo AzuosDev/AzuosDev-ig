@@ -6,6 +6,7 @@ const equipe: Perfil[] = [
     nome: "Felipe de Souza",
     cargo: "Cofundador",
     foto: "/equipe/felipe-souza.jpg",
+    foco: "50% 62%",
     bio: "Cofundador da Azuos Dev, à frente do desenvolvimento e da arquitetura técnica de cada sistema entregue.",
     github: "https://github.com/Felipe-Souzza",
   },
