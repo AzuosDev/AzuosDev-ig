@@ -28,7 +28,7 @@ const equipe: Perfil[] = [
 export default function QuemSomos() {
   return (
     <section id="quem-somos" aria-labelledby="equipe-titulo" className="px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
-      <div className="mx-auto max-w-page">
+      <div className="mx-auto grid max-w-page items-center gap-12 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:gap-16">
         <SectionHeading
           id="equipe-titulo"
           align="left"
@@ -41,7 +41,7 @@ export default function QuemSomos() {
           fim.
         </SectionHeading>
 
-        <ProfileCardCarousel perfis={equipe} className="mt-14" />
+        <ProfileCardCarousel perfis={equipe} className="lg:justify-self-end" />
       </div>
     </section>
   );
