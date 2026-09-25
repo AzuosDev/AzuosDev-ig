@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+const token = (name: string) => `rgb(var(--${name}) / <alpha-value>)`;
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,32 +11,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0B0714",
-        surface: "#14101F",
+        paper: token("paper"),
+        "paper-2": token("paper-2"),
+        surface: token("surface"),
+        "surface-2": token("surface-2"),
+        line: token("line"),
+        ink: token("ink"),
+        body: token("body"),
+        muted: token("muted"),
+        accent: token("accent"),
+        signal: token("signal"),
+        "signal-2": token("signal-2"),
+        "on-signal": token("on-signal"),
+        scene: token("scene"),
+        "scene-line": token("scene-line"),
         brand: {
           start: "#7C3AED",
           end: "#A78BFA",
         },
-        text: {
-          primary: "#F5F3F9",
-          secondary: "#9C93AD",
-        },
-      },
-      backgroundImage: {
-        "brand-gradient": "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)",
       },
       fontFamily: {
-        display: ["var(--font-display)"],
-        body: ["var(--font-body)"],
+        display: ["var(--font-display)", "var(--font-body)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+      },
+      letterSpacing: {
+        display: "-0.04em",
+      },
+      maxWidth: {
+        page: "88rem",
+      },
+      transitionTimingFunction: {
+        "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",
       },
       keyframes: {
-        "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+        rise: {
+          "0%": { opacity: "0", transform: "translateY(24px)", filter: "blur(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0)" },
         },
       },
       animation: {
-        "fade-up": "fade-up 0.3s ease-out forwards",
+        rise: "rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
     },
   },

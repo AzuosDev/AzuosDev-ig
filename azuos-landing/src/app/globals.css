@@ -2,13 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tokens em triplets RGB para funcionar com os modificadores de opacidade do Tailwind. */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: 11 7 20;
+  --paper-2: 16 11 28;
+  --surface: 20 16 31;
+  --surface-2: 28 22 43;
+  --line: 44 36 62;
+  --ink: 245 243 249;
+  --body: 194 186 210;
+  --muted: 156 147 173;
+  --accent: 167 139 250;
+  --signal: 205 190 255;
+  --signal-2: 167 139 250;
+  --on-signal: 22 10 46;
+  --scene: 33 19 66;
+  --scene-line: 72 50 124;
+  --dot: 167 139 250;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --paper: 248 246 252;
+  --paper-2: 240 236 249;
+  --surface: 255 255 255;
+  --surface-2: 245 241 252;
+  --line: 224 217 238;
+  --ink: 22 14 38;
+  --body: 72 63 94;
+  --muted: 101 92 122;
+  --accent: 109 40 217;
+  --signal: 139 92 246;
+  --signal-2: 109 40 217;
+  --on-signal: 255 255 255;
+  --scene: 236 228 255;
+  --scene-line: 212 198 250;
+  --dot: 124 58 237;
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
-  background-color: #0b0714;
-  color: #f5f3f9;
+  background-color: rgb(var(--paper));
+  color: rgb(var(--ink));
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.35);
+  color: rgb(var(--ink));
+}
+
+* {
+  scrollbar-color: rgb(var(--line)) rgb(var(--paper));
+}
+
+input,
+textarea {
+  caret-color: rgb(var(--accent));
+}
+
+@layer components {
+  .dot-grid {
+    background-image: radial-gradient(rgb(var(--dot) / 0.22) 1px, transparent 1.2px);
+    background-size: 14px 14px;
+  }
+
+  /* Palco: painel grande arredondado com lavagem violeta, usado no hero e no rodapé. */
+  .stage {
+    background:
+      radial-gradient(70% 60% at 12% 0%, rgb(var(--scene) / 0.9) 0%, transparent 70%),
+      radial-gradient(120% 90% at 85% 100%, rgb(var(--scene)) 0%, transparent 65%),
+      linear-gradient(160deg, rgb(var(--surface)) 0%, rgb(var(--scene) / 0.55) 55%, rgb(var(--scene) / 0.85) 100%);
+  }
+
+  .btn-signal {
+    background-image: linear-gradient(100deg, rgb(var(--signal)) 0%, rgb(var(--signal-2)) 100%);
+    color: rgb(var(--on-signal));
+    box-shadow: 0 10px 30px -12px rgb(var(--signal-2) / 0.7);
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .heading {
+    @apply font-display font-semibold tracking-display text-ink;
+    text-wrap: balance;
+    line-height: 1.02;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

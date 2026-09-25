@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Bricolage_Grotesque, Geist } from "next/font/google";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 
-const display = Space_Grotesk({
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700"],
   variable: "--font-display",
 });
 
-const body = Inter({
+const body = Geist({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   variable: "--font-body",
 });
 
@@ -46,14 +46,32 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0B0714" },
+    { media: "(prefers-color-scheme: light)", color: "#F8F6FC" },
+  ],
+};
+
+// Aplica o tema salvo antes da primeira pintura para evitar flash. Escuro é o padrão.
+const themeScript = `try{var t=localStorage.getItem("azuos-theme");document.documentElement.dataset.theme=t==="light"?"light":"dark"}catch(e){document.documentElement.dataset.theme="dark"}`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${display.variable} ${body.variable}`}>
-      <body className="bg-background text-text-primary font-body antialiased">
+    <html
+      lang="pt-BR"
+      data-theme="dark"
+      suppressHydrationWarning
+      className={`${display.variable} ${body.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body className="bg-paper font-body text-ink antialiased">
         {children}
       </body>
     </html>
