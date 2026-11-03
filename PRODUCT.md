@@ -16,7 +16,7 @@ A Azuos Dev é uma dev house que desenvolve sistemas sob medida, automações de
 Cada projeto nasce do fluxo real da empresa, não de template genérico. Três sócios cofundadores conduzem o projeto do início ao fim, com cronograma e marcos definidos no orçamento, acompanhamento transparente, pagamento por etapa e garantia pós-entrega.
 
 ## Operating Context
-Contato por formulário (`/api/contact`), WhatsApp (wa.me/558899785493) e e-mail azuos.org@gmail.com. Instagram @azuos.dev. Orçamento sempre "sob consulta"; não há preço público.
+Contato por formulário (`/api/contact`), WhatsApp (wa.me/5588988868716) e e-mail azuos.org@gmail.com. Instagram @azuos.dev. Orçamento sempre "sob consulta"; não há preço público.
 
 ## Capabilities and Constraints
 - Stack da landing: Next.js 15 (App Router), React 19, Tailwind CSS 3, deploy na Vercel. Backend planejado: NestJS + Mongoose + MongoDB Atlas.
