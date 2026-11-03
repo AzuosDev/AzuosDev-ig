@@ -28,11 +28,4 @@ export const sistemas: Sistema[] = [
     imagem: "/sistemas/meugasto.png",
     link: "https://meugasto.vercel.app/landing",
   },
-  {
-    nome: "InvenTech",
-    descricao: "Sistema de gestão de inventário de TI",
-    tags: ["Painel Admin"],
-    imagem: "/sistemas/inventechti.png",
-    link: "https://inventechti.vercel.app/landing",
-  },
 ];
