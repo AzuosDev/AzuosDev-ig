@@ -4,17 +4,17 @@ import ProfileCardCarousel, { type Perfil } from "@/components/ui/ProfileCardCar
 const equipe: Perfil[] = [
   {
     nome: "Felipe de Souza",
-    cargo: "Cofundador",
+    cargo: "Cofundador · Desenvolvimento e Infraestrutura",
     foto: "/equipe/felipe-souza.jpg",
     foco: "50% 62%",
-    bio: "Cofundador da Azuos Dev, à frente do desenvolvimento e da arquitetura técnica de cada sistema entregue.",
+    bio: "Cofundador da Azuos Dev, responsável pelo desenvolvimento e pela arquitetura dos sistemas, do código à infraestrutura e aos servidores onde cada projeto roda.",
     github: "https://github.com/Felipe-Souzza",
   },
   {
     nome: "Ezequiel Santos",
-    cargo: "Cofundador",
+    cargo: "Cofundador · Automações",
     foto: "/equipe/ezequiel-santos.jpg",
-    bio: "Cofundador da Azuos Dev, focado em automações e em transformar processos manuais em soluções sob medida.",
+    bio: "Cofundador da Azuos Dev, especialista em automação de processos: mapeia a rotina manual que trava a operação e devolve ela rodando sozinha.",
     github: "https://github.com/EzequiellSantos",
   },
   {
@@ -22,6 +22,14 @@ const equipe: Perfil[] = [
     cargo: "Cofundador · Finanças e Marketing",
     foto: "/equipe/luiz-eduardo.jpg",
     bio: "Sócio e cofundador da Azuos Dev, à frente do marketing, das mídias sociais e do controle financeiro que mantém cada projeto no rumo.",
+    github: "https://github.com/Luizeduardo09",
+  },
+  {
+    nome: "David Rafael",
+    cargo: "Cofundador · Negócios e Vendas",
+    foto: "/equipe/david-rafael.jpg",
+    bio: "Cofundador da Azuos Dev, à frente de negócios e vendas, acompanha o cliente do primeiro contato ao desenvolvimento e à entrega.",
+    github: "https://github.com/NaoSouODavid",
   },
 ];
 
