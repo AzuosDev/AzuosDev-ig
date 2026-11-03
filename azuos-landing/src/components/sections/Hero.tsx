@@ -7,7 +7,7 @@ const destaques: { titulo: string; href: string; destino: string; icon: IconName
   { titulo: "Orçamento com escopo, prazo e valor", href: "#processo", destino: "Ver processo", icon: "receipt" },
   { titulo: "Pagamento dividido por etapa", href: "#faq", destino: "Ver pagamento", icon: "wallet" },
   { titulo: "Garantia com correções incluídas", href: "#processo", destino: "Ver garantia", icon: "shield" },
-  { titulo: "4 sistemas reais em produção", href: "#projetos", destino: "Ver projetos", icon: "layers" },
+  { titulo: "3 sistemas reais em produção", href: "#projetos", destino: "Ver projetos", icon: "layers" },
 ];
 
 export default function Hero() {

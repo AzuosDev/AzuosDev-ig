@@ -30,9 +30,9 @@ Contato por formulário (`/api/contact`), WhatsApp (wa.me/5588988868716) e e-mai
 - Tema escuro é o padrão; tema claro disponível por alternância (decisão do usuário, 2026-09-25).
 
 ## Evidence on Hand
-- Projetos reais em produção com prints: Ucatálogo, Trimbook, MeuGasto, InvenTech (`azuos-landing/public/sistemas/`, `azuos-landing/src/data/sistemas.ts`).
+- Projetos reais em produção com prints: Ucatálogo, Trimbook, MeuGasto (`azuos-landing/public/sistemas/`, `azuos-landing/src/data/sistemas.ts`).
 - Equipe: Felipe de Souza (desenvolvimento, arquitetura e infraestrutura) e Ezequiel Santos (automação de processos), cofundadores com GitHub; Luiz Eduardo, sócio e cofundador, marketing, mídias sociais e controle financeiro, com GitHub; David Rafael, sócio e cofundador, negócios e vendas, com GitHub. Fotos em `azuos-landing/public/equipe/`.
-- Indicadores reais: 4 sistemas em produção, 6+ tecnologias no stack.
+- Indicadores reais: 3 sistemas em produção, 6+ tecnologias no stack.
 - Ausentes, não inventar: depoimentos de clientes, avaliações, preços, número de clientes, prazos além dos já citados no FAQ.
 
 ## Product Principles

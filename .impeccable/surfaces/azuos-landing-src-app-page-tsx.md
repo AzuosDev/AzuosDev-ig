@@ -8,7 +8,7 @@ related_targets: []
 # Landing Azuos Dev
 
 Scope: landing única (`azuos-landing/src/app/page.tsx`). Mode: Persuade.
-Audience: donos/gestores de PMEs e autônomos. Action: pedir orçamento (formulário no hero ou WhatsApp). Proof: 4 sistemas reais em produção, 2 cofundadores reais.
+Audience: donos/gestores de PMEs e autônomos. Action: pedir orçamento (formulário no hero ou WhatsApp). Proof: 3 sistemas reais em produção, 4 cofundadores reais.
 Constraints: manter nome, cores (#7C3AED/#A78BFA/#0B0714), projetos, links e textos; tema escuro padrão + claro por toggle; sem preços, sem depoimentos inventados.
 Build path: code-led (sem geração de imagem nesta sessão).
 

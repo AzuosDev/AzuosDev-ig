@@ -62,7 +62,7 @@ export default function Apresentacao() {
 
         <p className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[15px] text-body">
           <span>
-            <strong className="font-display text-xl font-semibold text-ink">4</strong> sistemas em
+            <strong className="font-display text-xl font-semibold text-ink">3</strong> sistemas em
             produção
           </span>
           <span aria-hidden className="hidden h-4 w-px bg-line sm:block" />
